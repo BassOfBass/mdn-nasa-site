@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.tabSize": 2,
+		"editor.detectIndentation": false,
+    "editor.foldingStrategy": "indentation",
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+      {
+        "color": "#f54100",
+        "column": 90
+      }
+    ],
+    "files.autoSave": "onWindowChange",
+    "javascript.preferences.quoteStyle": "double",
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.referencesCodeLens.enabled": true,
+    "emmet.extensionsPath": null,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode"
+    ]
+  }
+}
