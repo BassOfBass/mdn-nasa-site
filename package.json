@@ -4,6 +4,7 @@
   "description": "The site fetching NASA data about nearest incoming cosmic apocalypse.",
   "main": "index.js",
   "scripts": {
+    "build": "parcel build src/index.html",
     "dev": "parcel src/index.html"
   },
   "repository": {
