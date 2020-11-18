@@ -2,13 +2,13 @@
 import axios from 'axios';
 import { addDays } from 'date-fns';
 
-test().catch((e) => {
+testNasaFeed().catch((e) => {
   console.log(`Failed: ${e.message}`);
   process.exit(1);
 });
 
 // tests the structure of the json is the way we expect
-function test() {
+function testNasaFeed() {
 
   return axios.get(
     `https://api.nasa.gov/neo/rest/v1/feed?start_date=${getDate()}&api_key=DEMO_KEY`
