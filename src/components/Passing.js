@@ -5,6 +5,7 @@ import format from 'date-fns/format';
 const formatter = formatNumber();
 
 export default function Passing({ data }) {
+
   return data.map((_, i) => (
     <p key={i}>
       Misses {_.orbiting_body} tomorrow at{' '}
@@ -13,4 +14,5 @@ export default function Passing({ data }) {
       at {formatNumber({ truncate: 0 })(_.relative_velocity.miles_per_hour)}mph
     </p>
   ));
+  
 }

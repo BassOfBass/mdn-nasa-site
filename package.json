@@ -4,7 +4,8 @@
   "description": "The site fetching NASA data about nearest incoming cosmic apocalypse.",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "npm run test && parcel build src/index.html",
+    "test": "node tests/*.js",
     "dev": "parcel src/index.html"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/BassOfBass/mdn-nasa-site#readme",
   "devDependencies": {
+    "axios": "^0.21.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.13.0",
     "eslint-plugin-react": "^7.21.5",

@@ -8,6 +8,7 @@ export default function Orbital({
   close_approach_data,
   nasa_jpl_url,
 }) {
+
   return (
     <div
       className={is_potentially_hazardous_asteroid ? 'is-hazard' : 'no-hazard'}
@@ -25,4 +26,5 @@ export default function Orbital({
       </p>
     </div>
   );
+  
 }

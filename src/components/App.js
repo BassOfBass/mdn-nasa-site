@@ -15,6 +15,8 @@ const fetchData = () =>
 
 export default function App() {
   const data = useAsync(fetchData, []);
+  const day = getDate(addDays(new Date(), 1));
+  const results = data.result.near_earth_objects[day];
 
   if (data.loading) {
     document.title = 'Counting potential earth HAZARDS…';
@@ -28,7 +30,6 @@ export default function App() {
     
   }
 
-  const day = getDate(addDays(new Date(), 1));
   const hazards = data.result.near_earth_objects[day].reduce((acc, curr) => {
 
     if (curr.is_potentially_hazardous_asteroid) {
@@ -41,9 +42,9 @@ export default function App() {
 
   }, 0);
 
-  document.title = `${hazards} potential HAZARDS ${hazards > 0 ? '😱' : '👍'}`;
-
-  const results = data.result.near_earth_objects[day];
+  document.title = hazards > 0 
+    ? `${hazards} potential HAZARDS 😱` 
+    : `No hazards 👍`;
 
   return (
     <div>
